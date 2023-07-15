@@ -124,7 +124,6 @@ class _SubscribeToPremiumBodyState extends State<SubscribeToPremiumBody> {
                 child: CustomButton(
                   onPress: () {
                     // NavigationHelper.pushRoute(context, const NewPasswordView());
-                    print('Forgot Password Body');
                     showModalBottomSheet(
                       isScrollControlled: true,
                       backgroundColor: Colors.transparent,

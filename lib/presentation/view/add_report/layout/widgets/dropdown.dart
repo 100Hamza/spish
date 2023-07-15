@@ -21,10 +21,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
   // List of items in our dropdown menu
   var items = [
     'Business',
-    'Business1',
-    'Business2',
-    'Business3',
-    'Business4',
+    'Individual'
   ];
 
   @override
@@ -50,7 +47,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
               // Initial Value
               value: dropdownvalue,
               // Down Arrow Icon
-              icon: Icon(Icons.keyboard_arrow_down , color: FrontEndConfig.kTextFieldFontColor,),
+              icon: const Icon(Icons.keyboard_arrow_down , color: FrontEndConfig.kTextFieldFontColor,),
               // Array list of items
               items: items.map((String items) {
                 return DropdownMenuItem(

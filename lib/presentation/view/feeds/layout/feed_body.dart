@@ -31,7 +31,7 @@ class _FeedBodyState extends State<FeedBody> {
         child: Column(
           children: [
 
-            widget.isAppBar? CustomAppBar() : Container(),
+            widget.isAppBar? const CustomAppBar() : Container(),
             widget.isSearch == true ? NewsFeedSearch(title: 'News feed' ,isIcon: false,) : Container(),
             widget.isPost ? const CreatePost() : Container(),
             widget.isPost ? const CreatePostDivider() : Container(),

@@ -7,28 +7,29 @@ import 'package:spish/ui_config/front_end_config.dart';
 
 class ReactionsOnPost extends StatelessWidget {
   IconData? icon;
-  String? count;
-  bool isRotated; // to enable the rotated icon. I've rotate the
+  int? count;
+  bool isRotated , isLike , isText; // to enable the rotated icon. I've rotate the
   double size;
-  ReactionsOnPost({this.icon, this.count, this.isRotated = false , this.size = 20});
+  VoidCallback? onPress;
+  ReactionsOnPost({this.icon, this.count, this.isRotated = false , this.size = 20 , this.onPress , this.isLike = false , this.isText = false});
 
   @override
   Widget build(BuildContext context) {
     return Row(
 
       children: [
-        isRotated == false? Icon(icon , color: FrontEndConfig.kReactionsIconsColor ,size: size,) :   Transform(
+        isRotated == false? InkWell(onTap: onPress,child: Icon(icon , color: isLike? FrontEndConfig.kFabColors: FrontEndConfig.kReactionsIconsColor ,size: size,)) :   Transform(
     transform: Matrix4.identity()..scale(-1.0, 1.0),
     alignment: Alignment.center,
-    child: Icon(icon , color: FrontEndConfig.kReactionsIconsColor,)),
+    child: InkWell(onTap: onPress,child: Icon(icon , color: isLike? FrontEndConfig.kFabColors: FrontEndConfig.kReactionsIconsColor ,))),
         SizedBox(width: ScreenSize().width(context, 0.01),),
-        CustomText(
-          text: count.toString(),
+        !isText? CustomText(
+          text: isLike? (count!+0).toString() : (count!-1).toString(),
           fontSize: 12,
           fontWeight: FontWeight.w300,
           textColor: FrontEndConfig.kCommentTitleTextColor,
           fontFamily: 'Roboto',
-        ),
+        ): Container(),
       ],
     );
   }

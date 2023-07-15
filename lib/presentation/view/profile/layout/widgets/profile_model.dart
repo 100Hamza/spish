@@ -52,7 +52,7 @@ class ProfileModel extends StatelessWidget {
                           children: [
                             CustomText(
                               text: 'Muhammad Hamza',
-                              fontSize: 12,
+                              fontSize: 16,
                               fontWeight: FontWeight.w400,
                               textColor: FrontEndConfig.kGrayTextColor,
                               fontFamily: 'Roboto',
@@ -60,7 +60,7 @@ class ProfileModel extends StatelessWidget {
                             SizedBox( height: ScreenSize().height(context, 0.005)),
                             CustomText(
                               text: '@muhammadhamza',
-                              fontSize: 10,
+                              fontSize: 12,
                               fontWeight: FontWeight.w400,
                               textColor: FrontEndConfig.kProfileUserNameColor,
                               fontFamily: 'Roboto',
@@ -72,16 +72,16 @@ class ProfileModel extends StatelessWidget {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            ReactionsOnPost(icon: Icons.mail,count: '' , size: 16),
+                            ReactionsOnPost(icon: Icons.mail , size: 16 , onPress: (){} ,count: 0, isText: true, ),
                             CustomText(
                               text: 'Message',
-                              fontSize: 10,
+                              fontSize: 12,
                               fontWeight: FontWeight.w400,
                               textColor: FrontEndConfig.kFabColors,
                               fontFamily: 'Roboto',
                             ),
                             SizedBox(width: ScreenSize().width(context, 0.1),),
-                            ReactionsOnPost(icon: Icons.thumb_up_rounded,count: '',),
+                            ReactionsOnPost(icon: Icons.thumb_up_rounded, count: 0 , isText: true,),
                           ],
 
                         ),
@@ -96,7 +96,7 @@ class ProfileModel extends StatelessWidget {
           isMore? Container():  SizedBox( height: ScreenSize().height(context, 0.007)),
           isMore ? const Padding(padding: EdgeInsets.only(top:  10)): CustomGradientText(
             text: 'Change Profile Picture',
-            fontSize: 10,
+            fontSize: 12,
             fontWeight: FontWeight.w400,
             textColor: Colors.white,
             fontFamily: 'Roboto',
@@ -105,8 +105,9 @@ class ProfileModel extends StatelessWidget {
 
           CustomText(
             text: 'Tech Enthusiast | Web Developer & product designer | React js | Son of man',
-            fontSize: 10,
-            fontWeight: FontWeight.w400,
+            fontSize: 12,
+            fontWeight: FontWeight.w200,
+
             textColor: FrontEndConfig.kGrayTextColor,
             fontFamily: 'Roboto',
           ),
@@ -115,14 +116,14 @@ class ProfileModel extends StatelessWidget {
             children: [
               CustomText(
                 text: '10k',
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: FontWeight.w700,
                 textColor: FrontEndConfig.kFabColors,
                 fontFamily: 'Roboto',
               ),
               CustomText(
                 text: ' Followers',
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: FontWeight.w400,
                 textColor: FrontEndConfig.kFabColors,
                 fontFamily: 'Roboto',
@@ -132,14 +133,14 @@ class ProfileModel extends StatelessWidget {
               ),
               CustomText(
                 text: '320',
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: FontWeight.w700,
                 textColor: FrontEndConfig.kFabColors,
                 fontFamily: 'Roboto',
               ),
               CustomText(
                 text: ' Following',
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: FontWeight.w400,
                 textColor: FrontEndConfig.kFabColors,
                 fontFamily: 'Roboto',
@@ -153,7 +154,7 @@ class ProfileModel extends StatelessWidget {
                 onTap: onPress,
                 child: CustomText(
                   text: isMore? 'Less':'More',
-                  fontSize: 10,
+                  fontSize: 12,
                   fontWeight: FontWeight.w400,
                   textColor: FrontEndConfig.kMoreTextColor,
                   fontFamily: 'Roboto',

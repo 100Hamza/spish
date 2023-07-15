@@ -39,6 +39,7 @@ class _AddReportBodyState extends State<AddReportBody> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> suggestons = ["USA", "UK", "Uganda", "Uruguay", "United Arab Emirates"];
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
@@ -71,21 +72,6 @@ class _AddReportBodyState extends State<AddReportBody> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // Padding(
-                        //   padding: const EdgeInsets.only(left: 8.0),
-                        //   child: InkWell(
-                        //     onTap: (){
-                        //       Navigator.pop(context);
-                        //     },
-                        //     child: Container(
-                        //       decoration: BoxDecoration(
-                        //         color: Colors.white,
-                        //         borderRadius: BorderRadius.circular(20),
-                        //       ),
-                        //       child: Icon(Icons.close , color: FrontEndConfig.kSubscribeCardColor,),
-                        //     ),
-                        //   ),
-                        // ),
                         CustomText(
                           text: 'Report something',
                           fontSize: 12,
@@ -134,12 +120,10 @@ class _AddReportBodyState extends State<AddReportBody> {
                       ),
                     ),
 
-
-
                     SizedBox(height: ScreenSize().height(context, 0.02),),
                     SizedBox(
                       width: ScreenSize().width(context, 1),
-                      child: CustomTextField(textInputType: TextInputType.name , controller: _firstName, fieldName: 'first_name'.tr(),),
+                      child: CustomTextField(textInputType: TextInputType.name , controller: _firstName, fieldName: 'name'.tr(),),
                     ),
                   Row(
                     children: [
@@ -149,11 +133,81 @@ class _AddReportBodyState extends State<AddReportBody> {
                       Expanded(
                         child: SizedBox(
                           width: ScreenSize().width(context, 1),
-                          child: CustomTextField(textInputType: TextInputType.name , controller: _firstName, fieldName: 'first_name'.tr(),),
+                          // child: CustomTextField(textInputType: TextInputType.name , controller: _firstName, fieldName: 'Location'.tr(),),
+                          child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  CustomText(text: "Location", fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',),
+                                  SizedBox(height: 5,),
+                                  Container(
+                                    height: ScreenSize().height(context,0.05),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(4), // Set the border radius to make it round
+
+                                    ),
+
+                                    child: Autocomplete(
+                                      optionsBuilder: (TextEditingValue textEditingValue) {
+                                        if (textEditingValue.text == '') {
+                                          return const Iterable<String>.empty();
+                                        }else{
+                                          List<String> matches = <String>[];
+                                          matches.addAll(suggestons);
+
+                                          matches.retainWhere((s){
+                                            return s.toLowerCase().contains(textEditingValue.text.toLowerCase());
+                                          });
+                                          return matches;
+                                        }
+                                      },
+                                      fieldViewBuilder: (BuildContext context, TextEditingController textEditingController, FocusNode focusNode, VoidCallback onFieldSubmitted) {
+                                        return TextFormField(
+
+                                            controller: textEditingController,
+                                            focusNode: focusNode,
+                                          cursorHeight: 20,
+                                          style: TextStyle(
+                                            color: FrontEndConfig.kTextFieldFontColor,
+                                            fontSize: 16,
+                                            // fontWeight: fontWeight,
+                                          ),
+                                          cursorColor: FrontEndConfig.kTextFieldFontColor,
+                                            decoration: InputDecoration(
+                                              focusColor: FrontEndConfig.borderColor,
+                                              fillColor: FrontEndConfig.kTextFieldFilledColor,
+                                            filled: true,
+                                              enabledBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(5), // Set the border radius
+                                                borderSide: BorderSide.none, // Remove the border
+                                              ),
+                                              focusedBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(5),
+                                                borderSide: BorderSide(color: FrontEndConfig.kFocusedBorderColor, width: 2),
+                                              ),
+                                            border: OutlineInputBorder(
+                                              borderRadius: BorderRadius.circular(5),
+                                              borderSide:
+                                              BorderSide(width: 4, color: FrontEndConfig.kFocusedBorderColor),
+                                            ), // Remove the default border
+                                              contentPadding: EdgeInsets.symmetric(vertical: 5 , horizontal: 10),
+                                        ),);
+                                      },
+                                      onSelected: (String selection) {
+                                        print('You just selected $selection');
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+
                         ),
                       ),
                     ],
                   ),
+
                     CustomTextField(
                       isTitle: true,
                       isHintText: false,
@@ -163,6 +217,7 @@ class _AddReportBodyState extends State<AddReportBody> {
                       textInputType: TextInputType.multiline,
                       fieldName: 'Details',
                     ),
+
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0 , right: 10 , bottom: 10,),
                       child: Container(
@@ -174,6 +229,8 @@ class _AddReportBodyState extends State<AddReportBody> {
                           },
                           text: 'Publish report', fontColor: Colors.white, width: 0.39, isIcon: false, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16,),
                       ),
+
+
 
                     ),
                   ]),

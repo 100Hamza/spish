@@ -61,7 +61,7 @@ class _ProfileBodyState extends State<ProfileBody> {
             SizedBox(height: ScreenSize().height(context, 0.02) ,),
             Expanded(
               child: TabBarView(children: [
-                FeedBody(isSearch: false , isPost: false , isAppBar: false),
+                FeedBody(isSearch: false , isPost: false , isAppBar: false , ),
                 const Followers(),
                 const Following(),
               ]),

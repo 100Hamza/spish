@@ -10,7 +10,7 @@ class TabsText extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomText(
       text: text.toString(),
-      fontSize:   10,
+      fontSize:   14,
       fontWeight: FontWeight.w400,
       fontFamily: 'Roboto',
     );
