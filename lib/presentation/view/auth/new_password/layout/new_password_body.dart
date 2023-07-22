@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_button.dart';
 import 'package:spish/presentation/view/auth/login/login_view.dart';
@@ -32,22 +33,22 @@ class _NewPasswordBodyState extends State<NewPasswordBody> {
                   width: ScreenSize().height(context, 0.2),
                   child: const Image(image: AssetImage('assets/images/logo.png'))),
               SizedBox(height: ScreenSize().height(context, 0.034),),
-              CustomText(text: 'Reset your password', fontSize: 14, fontWeight: FontWeight.w500, textColor: Colors.white, fontFamily: 'Roboto',),
+              CustomText(text: 'reset_your_password'.tr(), fontSize: 14, fontWeight: FontWeight.w500, textColor: Colors.white, fontFamily: 'Roboto',),
               SizedBox(
                   width: ScreenSize().width(context, 0.14),
                   child: Divider(height: ScreenSize().height(context, 0.04) , color: Colors.white,thickness: 3,)),
               SizedBox(height: ScreenSize().height(context, 0.02),),
               Container(
                   alignment: Alignment.center,
-                  child: CustomText(text: 'Can’t remember my password', fontSize: 10, fontWeight: FontWeight.w400, textColor: FrontEndConfig.kGrayTextColor, fontFamily: 'Roboto',)),
+                  child: CustomText(text: 'cant_not_remember'.tr(), fontSize: 10, fontWeight: FontWeight.w400, textColor: FrontEndConfig.kGrayTextColor, fontFamily: 'Roboto',)),
               SizedBox(height: ScreenSize().height(context, 0.025),),
               SizedBox(
                 width: ScreenSize().height(context, 1),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomTextField(textInputType: TextInputType.emailAddress , controller: _passController, fieldName: 'Password' , isPass: true),
-                    CustomTextField(textInputType: TextInputType.visiblePassword , controller: _confirmPassword, fieldName: 'Confirm Password' , isPass: true),
+                    CustomTextField(textInputType: TextInputType.emailAddress , controller: _passController, fieldName: 'new_password'.tr() , isPass: true),
+                    CustomTextField(textInputType: TextInputType.visiblePassword , controller: _confirmPassword, fieldName: 'confirm_password'.tr() , isPass: true),
                     Padding(
                       padding: const EdgeInsets.all(19.0),
                       child: Container(
@@ -55,10 +56,10 @@ class _NewPasswordBodyState extends State<NewPasswordBody> {
                         child: CustomButton(
                           onPress: (){
                             NavigationHelper.pushRoute(context, const LoginView());
-                            print('Login Body');
+
 
                           },
-                          text: 'Submit', fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.arrow_forward_sharp,),
+                          text: 'submit'.tr(), fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.arrow_forward_sharp,),
                       ),
                     )
                   ],

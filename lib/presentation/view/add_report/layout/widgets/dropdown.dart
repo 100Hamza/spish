@@ -6,8 +6,20 @@ import '../../../../elements/custom_text.dart';
 
 class CustomDropDown extends StatefulWidget {
   String dropDownTitle;
-  double padding;
-  CustomDropDown({this.dropDownTitle = 'Report category' , this.padding = 10.0});
+  double padding, height;
+  bool isTitle;
+
+  final List<String> items;
+
+  CustomDropDown({
+    this.isTitle = true,
+    this.height = 0.05,
+    this.dropDownTitle = 'Report category',
+    this.padding = 10.0,
+    List<String>? items,
+  }) : items = items ?? ['Business', 'Individual'];
+
+  // CustomDropDown({this.dropDownTitle = 'Report category' , this.padding = 10.0});
 
   @override
   State<CustomDropDown> createState() => _CustomDropDownState();
@@ -15,14 +27,21 @@ class CustomDropDown extends StatefulWidget {
 
 class _CustomDropDownState extends State<CustomDropDown> {
 
+  String dropdownValue = '';
 
-  String dropdownvalue = 'Business';
-
-  // List of items in our dropdown menu
-  var items = [
-    'Business',
-    'Individual'
-  ];
+  @override
+  void initState() {
+    super.initState();
+    dropdownValue = widget.items[0]; // Set the initial dropdown value
+  }
+  //
+  // String dropdownvalue = 'Business';
+  //
+  // // List of items in our dropdown menu
+  // var items = [
+  //   'Business',
+  //   'Individual'
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +50,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomText(text: widget.dropDownTitle, fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',),
+          widget.isTitle? CustomText(text: widget.dropDownTitle, fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',) : Container(),
           SizedBox(height: 5,),
           Container(
             height: ScreenSize().height(context, 0.05),
@@ -45,11 +64,11 @@ class _CustomDropDownState extends State<CustomDropDown> {
               isExpanded: true,
               underline: Container(),
               // Initial Value
-              value: dropdownvalue,
+              value: dropdownValue,
               // Down Arrow Icon
               icon: const Icon(Icons.keyboard_arrow_down , color: FrontEndConfig.kTextFieldFontColor,),
               // Array list of items
-              items: items.map((String items) {
+              items: widget.items.map((String items) {
                 return DropdownMenuItem(
                   value: items,
                   child: CustomText(text: items, fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',),
@@ -60,7 +79,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
               // change button value to selected value
               onChanged: (String? newValue) {
                 setState(() {
-                  dropdownvalue = newValue!;
+                  dropdownValue = newValue!;
                 });
               },
             ),

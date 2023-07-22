@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_appbar.dart';
 import 'package:spish/presentation/utils/screen_size.dart';
@@ -49,13 +50,13 @@ class _ProfileBodyState extends State<ProfileBody> {
                 unselectedLabelColor: FrontEndConfig.kGrayTextColor,
                 tabs: [
                   Tab(
-                    icon:  TabsText(text: 'News Feeds',)
+                    icon:  TabsText(text: 'new_feed'.tr(),)
                   ),
                   Tab(
-                    icon: TabsText(text: 'Followers',)
+                    icon: TabsText(text: 'followers'.tr(),)
                   ),
                   Tab(
-                    icon: TabsText(text: 'Following',)
+                    icon: TabsText(text: 'following'.tr(),)
                   )
                 ]),
             SizedBox(height: ScreenSize().height(context, 0.02) ,),

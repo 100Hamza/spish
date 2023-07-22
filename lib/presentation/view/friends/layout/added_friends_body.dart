@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/view/feeds/widgets/search_textfield.dart';
 
@@ -20,7 +21,7 @@ class _AddedFriendsBodyState extends State<AddedFriendsBody> {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0 , vertical: 10),
-          child: SearchTextField(filledColor: FrontEndConfig.kSubscribeCardColor ),
+          child: SearchTextField(filledColor: FrontEndConfig.kSubscribeCardColor),
         ),
 
         Expanded(
@@ -28,7 +29,7 @@ class _AddedFriendsBodyState extends State<AddedFriendsBody> {
             padding: EdgeInsets.zero,
             itemCount: suggestionsList.length,
             itemBuilder: (context, index) {
-              return RequestsListCard(bgColor:  FrontEndConfig.kGrayTextColor,isGradient: false, fontColor: FrontEndConfig.kUnFriendTextColor,isSecondButton: false, width: .2 ,mainAxisAlignment: MainAxisAlignment.end, firstButtonTitle: 'Send request', userName: friendsRequestList[index].userName,requestSenderName: friendsRequestList[index].requestSenderName , skills: friendsRequestList[index].skills,);
+              return RequestsListCard(bgColor:  FrontEndConfig.kGrayTextColor,isGradient: false, fontColor: FrontEndConfig.kUnFriendTextColor,isSecondButton: false, width: .2 ,mainAxisAlignment: MainAxisAlignment.end, firstButtonTitle: 'send_request'.tr(), userName: friendsRequestList[index].userName,requestSenderName: friendsRequestList[index].requestSenderName , skills: friendsRequestList[index].skills,);
             },
           ),
         ),

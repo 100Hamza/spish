@@ -1,4 +1,5 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/navigation_helper/navigation_helper.dart';
 import 'package:spish/presentation/elements/custome_gradient_text.dart';
@@ -34,7 +35,7 @@ class _SubscribeToPremiumBodyState extends State<SubscribeToPremiumBody> {
           height: ScreenSize().height(context, 0.05),
         ),
         CustomGradientText(
-          text: 'Upgrade to Premium',
+          text: 'upgrade_to_premium'.tr(),
           fontSize: 20,
           fontWeight: FontWeight.w700,
           textColor: Colors.white,
@@ -44,7 +45,7 @@ class _SubscribeToPremiumBodyState extends State<SubscribeToPremiumBody> {
           height: ScreenSize().height(context, 0.01),
         ),
         CustomText(
-          text: 'Get access to create more post, comment and so more!',
+          text: 'get_access_to_create'.tr(),
           fontSize: 12,
           fontWeight: FontWeight.w700,
           textColor: FrontEndConfig.kLightGrayTextColor,
@@ -133,7 +134,7 @@ class _SubscribeToPremiumBodyState extends State<SubscribeToPremiumBody> {
                       },
                     );
                   },
-                  text: 'Subscribe',
+                  text: 'subscribe'.tr(),
                   fontColor: Colors.white,
                   width: 1,
                   height: 50,
@@ -148,7 +149,7 @@ class _SubscribeToPremiumBodyState extends State<SubscribeToPremiumBody> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: CustomGradientOutlinedButton(
-                  text: 'Continue as free',
+                  text: 'continue_as_free'.tr(),
                   width: 1,
                   height: 50,
                   fontSize: 16,

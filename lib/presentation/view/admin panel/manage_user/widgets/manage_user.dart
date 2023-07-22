@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_button.dart';
 
@@ -49,7 +50,7 @@ class UserManagmentModel extends StatelessWidget {
           ),
           CustomButton(
             fontSize: 8,
-            text: 'Track this ID',
+            text: 'track_this_id'.tr(),
             isIcon: false,
             onPress: (){},
             width: 0.15,

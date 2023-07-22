@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -51,11 +52,11 @@ class PieChart2State extends State {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const <Widget>[
+            children:  <Widget>[
               Indicator(
                 fontSize: 8,
                 color: FrontEndConfig.kGreenColor,
-                text: 'Male',
+                text: 'male'.tr(),
                 isSquare: true,
                 textColor: Colors.black,
               ),
@@ -65,7 +66,7 @@ class PieChart2State extends State {
               Indicator(
                 fontSize: 8,
                 color: FrontEndConfig.kGrayTextColor,
-                text: 'Female',
+                text: 'female'.tr(),
                 isSquare: true,
                 textColor: Colors.black,
               ),

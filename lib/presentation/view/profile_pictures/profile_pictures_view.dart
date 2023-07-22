@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_text.dart';
 
@@ -14,7 +15,7 @@ class ProfilePicView extends StatelessWidget {
         elevation: 0,
         backgroundColor: FrontEndConfig.kDarkBgColor,
         title:  CustomText(
-          text: 'Profile Picture',
+          text: 'profile_picture'.tr(),
           fontSize: 14,
           fontWeight: FontWeight.w700,
           textColor: Colors.white,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../navigation_helper/navigation_helper.dart';
@@ -74,7 +75,7 @@ class ProfileModel extends StatelessWidget {
                           children: [
                             ReactionsOnPost(icon: Icons.mail , size: 16 , onPress: (){} ,count: 0, isText: true, ),
                             CustomText(
-                              text: 'Message',
+                              text: 'message'.tr(),
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
                               textColor: FrontEndConfig.kFabColors,
@@ -95,7 +96,7 @@ class ProfileModel extends StatelessWidget {
           ),
           isMore? Container():  SizedBox( height: ScreenSize().height(context, 0.007)),
           isMore ? const Padding(padding: EdgeInsets.only(top:  10)): CustomGradientText(
-            text: 'Change Profile Picture',
+            text: 'change_profile_pic'.tr(),
             fontSize: 12,
             fontWeight: FontWeight.w400,
             textColor: Colors.white,
@@ -115,14 +116,14 @@ class ProfileModel extends StatelessWidget {
           Row(
             children: [
               CustomText(
-                text: '10k',
+                text: '10k ',
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
                 textColor: FrontEndConfig.kFabColors,
                 fontFamily: 'Roboto',
               ),
               CustomText(
-                text: ' Followers',
+                text: 'followers'.tr(),
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
                 textColor: FrontEndConfig.kFabColors,
@@ -132,14 +133,14 @@ class ProfileModel extends StatelessWidget {
                 width: ScreenSize().width(context, 0.06),
               ),
               CustomText(
-                text: '320',
+                text: '320 ',
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
                 textColor: FrontEndConfig.kFabColors,
                 fontFamily: 'Roboto',
               ),
               CustomText(
-                text: ' Following',
+                text: 'following'.tr(),
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
                 textColor: FrontEndConfig.kFabColors,
@@ -153,7 +154,7 @@ class ProfileModel extends StatelessWidget {
                 splashColor: Colors.transparent,
                 onTap: onPress,
                 child: CustomText(
-                  text: isMore? 'Less':'More',
+                  text: isMore? 'less'.tr():'more'.tr(),
                   fontSize: 12,
                   fontWeight: FontWeight.w400,
                   textColor: FrontEndConfig.kMoreTextColor,

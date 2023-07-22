@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_appbar.dart';
 import 'package:spish/presentation/elements/custom_button.dart';
@@ -23,9 +24,9 @@ class _SettingsBodyState extends State<SettingsBody> {
            children: [
              const CustomAppBar(),
              SizedBox(height: ScreenSize().height(context, 0.04),),
-             CustomListTiles(title: 'Change Subscription Plan', subtitle: '',),
-             CustomListTiles(title: 'Change Language Setting', subtitle: 'English (US)',),
-             CustomListTiles(title: 'Privacy Setting', subtitle: 'Name, Email and password Change',),
+             CustomListTiles(title: 'change_subscription_plan'.tr(), subtitle: '',),
+             CustomListTiles(title: 'change_lang_setting'.tr(), subtitle: 'English (US)',),
+             CustomListTiles(title: 'privacy_setting'.tr(), subtitle: 'name_email_and_password_change'.tr(),),
            ],
          ),
           Padding(
@@ -36,7 +37,7 @@ class _SettingsBodyState extends State<SettingsBody> {
                 height: 50,
                 isGradient: false,
                 isIcon: false,
-                text: 'Log Out',
+                text: 'logout'.tr(),
                 radius: 10,
                 fontColor: Colors.white,
                 fontWeight: FontWeight.w500,

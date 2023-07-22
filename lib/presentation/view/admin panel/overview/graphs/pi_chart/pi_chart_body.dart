@@ -1,4 +1,5 @@
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -66,7 +67,7 @@ class PieChart2State extends State {
             child: Column(children: [
               Indicator(
                 color: FrontEndConfig.kRegisteredUsersPiBarPremiumColor,
-                text: 'Premium User',
+                text: 'premium_users'.tr(),
                 isSquare: true,
               ),
               SizedBox(
@@ -74,7 +75,7 @@ class PieChart2State extends State {
               ),
               Indicator(
                 color: FrontEndConfig.kRegisteredUsersPiBarFreeUserColor,
-                text: 'Free User',
+                text: 'free_users'.tr(),
                 isSquare: true,
               ),
               SizedBox(

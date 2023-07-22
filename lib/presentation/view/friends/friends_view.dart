@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/utils/screen_size.dart';
 import 'package:spish/presentation/view/friends/layout/added_friends_body.dart';
@@ -21,12 +22,12 @@ class FriendsView extends StatelessWidget {
                 indicatorColor: FrontEndConfig.kFabColors,
                 labelColor: FrontEndConfig.kFabColors,
                 unselectedLabelColor: FrontEndConfig.kGrayTextColor,
-                tabs: const [
+                tabs: [
               Tab(
-                icon: Text('Friends Request'),
+                icon: Text('friend_request'.tr()),
               ),
               Tab(
-                icon: Text('Friends'),
+                icon: Text('friends'.tr()),
               ),
             ]),
             SizedBox(height: ScreenSize().height(context, 0.001) ,),

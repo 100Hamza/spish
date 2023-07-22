@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_appbar.dart';
 import 'package:spish/presentation/elements/custom_button.dart';
@@ -19,7 +20,7 @@ String dropDownValue = 'Everyone can reply';
 
 // List of items in our dropdown menu
 var items = [
-  'Everyone can reply',
+  'everyone'.tr(),
   'Nobody can reply',
   'Friends can reply',
 ];
@@ -109,7 +110,7 @@ class _CreatePostBodyState extends State<CreatePostBody> {
                                 height: 35,
                                 isGradient: false,
                                 isIcon: false,
-                                text: 'Publish post',
+                                text: 'publish_post'.tr(),
                                 radius: 50,
                                 fontColor: FrontEndConfig.kSubscribeAmountColor,
                                 containerColor:
@@ -124,6 +125,7 @@ class _CreatePostBodyState extends State<CreatePostBody> {
           CustomTextField(
             isTitle: false,
             isHintText: true,
+            hintText: 'What is Happening?'.tr(),
             isFilled: false,
             maxLines: 20,
             height: .33,

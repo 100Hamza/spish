@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/view/admin%20panel/analytics/widgets/post_acitivty.dart';
 
@@ -49,7 +50,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 CustomText(
-                                  text: 'Total Revenue',
+                                  text: 'total_revenue'.tr(),
                                   fontSize:   10,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: 'Roboto',
@@ -116,7 +117,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: CustomText(
-                              text: 'Total Premium User',
+                              text: 'total_premium_user'.tr(),
                               fontSize:   10,
                               fontWeight: FontWeight.w500,
                               fontFamily: 'Roboto',
@@ -141,7 +142,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                                   ),
                                   SizedBox(height: ScreenSize().height(context, 0.005) ,),
                                   CustomText(
-                                    text: 'Users',
+                                    text: 'users'.tr(),
                                     fontSize:   15,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: 'Roboto',
@@ -172,7 +173,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                         padding: EdgeInsets.only(top: 5),
                         alignment: Alignment.topCenter,
                         child: CustomText(
-                          text: 'No. of Photos',
+                          text: 'no_of_photos'.tr(),
                           fontSize:   10,
                           fontWeight: FontWeight.w500,
                           fontFamily: 'Roboto',
@@ -184,7 +185,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                       child: Container(
                         alignment: Alignment.centerLeft,
                         child: CustomText(
-                          text: '100K images',
+                          text: '100K${'images'.tr()}',
                           fontSize:   15,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
@@ -208,7 +209,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                         padding: EdgeInsets.only(top: 5),
                         alignment: Alignment.topCenter,
                         child: CustomText(
-                          text: 'No. of Videos',
+                          text: 'no_of_videos'.tr(),
                           fontSize:   10,
                           fontWeight: FontWeight.w500,
                           fontFamily: 'Roboto',
@@ -220,7 +221,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                       child: Container(
                         alignment: Alignment.centerLeft,
                         child: CustomText(
-                          text: '200 Videos',
+                          text: '200 ${'videos'.tr()}',
                           fontSize:   15,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
@@ -244,7 +245,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                         padding: EdgeInsets.only(top: 5),
                         alignment: Alignment.topCenter,
                         child: CustomText(
-                          text: 'Total Ad on site',
+                          text: 'total_ad_no_side'.tr(),
                           fontSize:   10,
                           fontWeight: FontWeight.w500,
                           fontFamily: 'Roboto',
@@ -256,7 +257,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                       child: Container(
                         alignment: Alignment.centerLeft,
                         child: CustomText(
-                          text: '500 links',
+                          text: '500 ${'links'.tr()}',
                           fontSize:   15,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
@@ -292,7 +293,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 5.0),
                                 child: CustomText(
-                                  text: 'Comment',
+                                  text: 'comments'.tr(),
                                   fontSize:   10,
                                   fontWeight: FontWeight.w700,
                                   fontFamily: 'Roboto',
@@ -342,7 +343,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 5.0),
                                 child: CustomText(
-                                  text: 'Likes',
+                                  text: 'likes'.tr(),
                                   fontSize:   10,
                                   fontWeight: FontWeight.w700,
                                   fontFamily: 'Roboto',
@@ -389,7 +390,7 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomText(
-                      text: 'Post Activity',
+                      text: 'post_activity'.tr(),
                       fontSize: 10,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',
@@ -400,42 +401,42 @@ class _AnalyticsBodyState extends State<AnalyticsBody> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomText(
-                          text: 'Profile Pic',
+                          text: 'profile_pic'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'Name',
+                          text: 'name'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'UserName',
+                          text: 'user_name'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'Date Posted',
+                          text: 'date_posted'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'No. of Views',
+                          text: 'no_of_views'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'Member',
+                          text: 'member'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',

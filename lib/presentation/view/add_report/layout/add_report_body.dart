@@ -73,7 +73,7 @@ class _AddReportBodyState extends State<AddReportBody> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomText(
-                          text: 'Report something',
+                          text: 'report_something'.tr(),
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
                           textColor: FrontEndConfig.kLightGrayTextColor,
@@ -128,7 +128,7 @@ class _AddReportBodyState extends State<AddReportBody> {
                   Row(
                     children: [
                        Expanded(
-                        child: CustomDropDown()
+                        child: CustomDropDown(dropDownTitle: 'Report category'.tr(), )
                       ),
                       Expanded(
                         child: SizedBox(
@@ -139,7 +139,7 @@ class _AddReportBodyState extends State<AddReportBody> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  CustomText(text: "Location", fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',),
+                                  CustomText(text: "location".tr(), fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',),
                                   SizedBox(height: 5,),
                                   Container(
                                     height: ScreenSize().height(context,0.05),
@@ -215,7 +215,7 @@ class _AddReportBodyState extends State<AddReportBody> {
                       maxLines: 5,
                       height: .15,
                       textInputType: TextInputType.multiline,
-                      fieldName: 'Details',
+                      fieldName: 'details'.tr(),
                     ),
 
                     Padding(
@@ -227,7 +227,7 @@ class _AddReportBodyState extends State<AddReportBody> {
                           onPress: (){
                             // NavigationHelper.pushRoute(context, const AccountVerifiedView());
                           },
-                          text: 'Publish report', fontColor: Colors.white, width: 0.39, isIcon: false, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16,),
+                          text: 'publish_report'.tr(), fontColor: Colors.white, width: 0.39, isIcon: false, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16,),
                       ),
 
 

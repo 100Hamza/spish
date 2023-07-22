@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../ui_config/front_end_config.dart';
@@ -25,7 +26,7 @@ class BoardListModel extends StatelessWidget {
             fontFamily: 'Roboto',
             textColor: Colors.white,
           ),
-          CustomButton(text: 'Approve', isIcon: false, isGradient: false, width: 0.2, height: 30, containerColor: FrontEndConfig.kActiveFemaleColor, fontColor: Colors.white, fontSize: 16, fontWeight: FontWeight.w500, radius: 0,)
+          CustomButton(text: 'approve'.tr(), isIcon: false, isGradient: false, width: 0.2, height: 30, containerColor: FrontEndConfig.kActiveFemaleColor, fontColor: Colors.white, fontSize: 16, fontWeight: FontWeight.w500, radius: 0,)
         ],
       ),
     );

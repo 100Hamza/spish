@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../ui_config/front_end_config.dart';
@@ -106,7 +107,7 @@ class RequestsListCard extends StatelessWidget {
                                     height: 20,
                                     isGradient: false,
                                     isIcon: false,
-                                    text: 'Reject',
+                                    text: 'reject'.tr(),
                                     fontSize: 9,
                                     radius: 50,
                                     fontColor: Colors.white,

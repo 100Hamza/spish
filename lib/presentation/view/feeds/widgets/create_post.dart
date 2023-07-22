@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/navigation_helper/navigation_helper.dart';
 import 'package:spish/presentation/view/create_post/layout/create_post_view.dart';
@@ -31,7 +32,7 @@ class CreatePost extends StatelessWidget {
                   Row(
                     children: [
                       CustomText(
-                        text: 'Create Post',
+                        text: 'create_post'.tr(),
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
                         textColor: FrontEndConfig.kGrayTextColor,
@@ -56,7 +57,7 @@ class CreatePost extends StatelessWidget {
                   ),
                   SizedBox(width:  ScreenSize().width(context, 0.03),),
                   CustomText(
-                    text: 'What is Happenings?',
+                    text: 'what_is_happening'.tr(),
                     fontSize: 12,
                     fontWeight: FontWeight.w300,
                     textColor: FrontEndConfig.kGrayTextColor,

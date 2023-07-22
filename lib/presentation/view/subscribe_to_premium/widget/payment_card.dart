@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/ui_config/front_end_config.dart';
 
@@ -31,14 +32,14 @@ class PaymentCard extends StatelessWidget {
             fontFamily: 'Roboto',
           ),
           CustomText(
-            text: 'months',
+            text: 'months'.tr(),
             fontSize: 16,
             fontWeight: FontWeight.w700,
             textColor: fontColor,
             fontFamily: 'Roboto',
           ),
           CustomGradientText(
-            text: '\$ ${amount}/mt',
+            text: '\$ ${amount}/yr',
             fontSize: 16,
             fontWeight: FontWeight.w700,
             textColor: Colors.white,

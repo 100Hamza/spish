@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../ui_config/front_end_config.dart';
@@ -41,7 +42,7 @@ class ProfilePicBody extends StatelessWidget {
               onPress: () {
                 Navigator.pop(context);
               },
-              text: 'Set as display picture',
+              text: 'set_as_display'.tr(),
               fontColor: Colors.white,
               width: 0.55,
               isIcon: false,

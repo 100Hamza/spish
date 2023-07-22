@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/navigation_helper/navigation_helper.dart';
 import 'package:spish/presentation/elements/custome_gradient_text.dart';
@@ -33,7 +34,7 @@ class AccountVerifiedBody extends StatelessWidget {
             Column(
               children: [
                 CustomGradientText(
-                  text: 'Congratulations',
+                  text: 'congratulations'.tr(),
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                   textColor: Colors.white,
@@ -43,7 +44,7 @@ class AccountVerifiedBody extends StatelessWidget {
                   height: ScreenSize().height(context, 0.03),
                 ),
                 CustomText(
-                  text: 'Your Account has been verified',
+                  text: 'your_account_has'.tr(),
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                   textColor: FrontEndConfig.kLightGrayTextColor,
@@ -57,7 +58,7 @@ class AccountVerifiedBody extends StatelessWidget {
                 onPress: () {
                   NavigationHelper.pushRoute(context, const LoginView());
                 },
-                text: 'Go to home',
+                text: 'go_to_home'.tr(),
                 fontColor: Colors.white,
                 width: 0.55,
                 isIcon: false,

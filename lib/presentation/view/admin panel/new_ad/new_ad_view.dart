@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/view/admin%20panel/new_ad/tabs_screen/add_details.dart';
 import 'package:spish/presentation/view/admin%20panel/new_ad/tabs_screen/comp_details.dart';
@@ -33,15 +34,15 @@ class NewAdView extends StatelessWidget {
                     labelColor: FrontEndConfig.kFabColors,
                     unselectedLabelColor: FrontEndConfig.kGrayTextColor,
                     splashBorderRadius: BorderRadius.circular(10),
-                    tabs: const [
+                    tabs: [
                       Tab(
-                        icon: Text('Ad Details'),
+                        icon: Text('ad_details'.tr()),
                       ),
                       Tab(
-                        icon: Text('Comp Details'),
+                        icon: Text('comp_details'.tr()),
                       ),
                       Tab(
-                        icon: Text('Post Ad'),
+                        icon: Text('post_ad'.tr()),
                       ),
                     ]),
               ),

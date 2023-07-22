@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/utils/screen_size.dart';
 
@@ -23,9 +24,9 @@ class _ManageUserBodyState extends State<ManageUserBody> {
         children: [
           CustomTextField(
             isTitle: true,
-            fieldName: 'Search User',
+            fieldName: 'search_user'.tr(),
             isHintText: true,
-            hintText: 'Search by name, username, email',
+            hintText: 'search_by_name_username_email'.tr(),
             isFilled: true,
             textInputType: TextInputType.text,
           ),
@@ -34,48 +35,48 @@ class _ManageUserBodyState extends State<ManageUserBody> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomText(text: 'Top Users', fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',),
+                CustomText(text: 'top_users'.tr(), fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',),
                 SizedBox(height: ScreenSize().height(context, 0.02),),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CustomText(
-                      text: 'Profile Pic',
+                      text: 'profile_picture'.tr(),
                       fontSize: 8,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',
                       textColor: FrontEndConfig.kCommentTitleTextColor,
                     ),
                     CustomText(
-                      text: 'Name',
+                      text: 'name'.tr(),
                       fontSize: 8,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',
                       textColor: FrontEndConfig.kCommentTitleTextColor,
                     ),
                     CustomText(
-                      text: 'UserName',
+                      text: 'user_name'.tr(),
                       fontSize: 8,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',
                       textColor: FrontEndConfig.kCommentTitleTextColor,
                     ),
                     CustomText(
-                      text: 'Member',
+                      text: 'member'.tr(),
                       fontSize: 8,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',
                       textColor: FrontEndConfig.kCommentTitleTextColor,
                     ),
                     CustomText(
-                      text: 'Password',
+                      text: 'password'.tr(),
                       fontSize: 8,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',
                       textColor: FrontEndConfig.kCommentTitleTextColor,
                     ),
                     CustomText(
-                      text: 'Tracking',
+                      text: 'tracking'.tr(),
                       fontSize: 8,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',

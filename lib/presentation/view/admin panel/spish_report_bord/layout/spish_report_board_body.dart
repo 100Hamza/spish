@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_button.dart';
 import 'package:spish/ui_config/front_end_config.dart';
@@ -29,7 +30,7 @@ class _SpishReportBoardBodyState extends State<SpishReportBoardBody> {
               child: Column(
                 children: [
                   CustomText(
-                    text: 'No. of Reports',
+                    text: 'no_of_reports'.tr(),
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     fontFamily: 'Roboto',
@@ -49,7 +50,7 @@ class _SpishReportBoardBodyState extends State<SpishReportBoardBody> {
                           ),
                           SizedBox(width: 20,),
                           CustomText(
-                            text: 'Reports',
+                            text: 'reports'.tr(),
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -68,7 +69,7 @@ class _SpishReportBoardBodyState extends State<SpishReportBoardBody> {
                           ),
                           SizedBox(width: 20,),
                           CustomText(
-                            text: 'Individual Reports',
+                            text: 'individual_report'.tr(),
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -87,7 +88,7 @@ class _SpishReportBoardBodyState extends State<SpishReportBoardBody> {
                           ),
                           SizedBox(width: 20,),
                           CustomText(
-                            text: 'Business Reports',
+                            text: 'business_reports'.tr(),
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -102,7 +103,7 @@ class _SpishReportBoardBodyState extends State<SpishReportBoardBody> {
             ),
             SizedBox(height: 20,),
             CustomText(
-              text: 'User Pending Reports',
+              text: 'user_pending_reports'.tr(),
               fontSize: 20,
               fontWeight: FontWeight.w500,
               fontFamily: 'Roboto',

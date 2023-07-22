@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/models/requests_and_suggestions_model.dart';
 import 'package:spish/presentation/view/feeds/widgets/search_textfield.dart';
@@ -32,7 +33,7 @@ class _FriendsRequestBodyState extends State<FriendsRequestBody> {
                 height: 20,
                 width: MediaQuery.of(context).size.width,
                 child:  CustomText(
-                  text: 'Friends Request',
+                  text: 'friend_request'.tr(),
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                   textColor: FrontEndConfig.kGrayTextColor,
@@ -46,7 +47,7 @@ class _FriendsRequestBodyState extends State<FriendsRequestBody> {
             itemCount: friendsRequestList.length,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return RequestsListCard(bgColor:  FrontEndConfig.kTextFieldFontColor,firstButtonTitle: 'Accept', userName: friendsRequestList[index].userName,requestSenderName: friendsRequestList[index].requestSenderName , skills: friendsRequestList[index].skills,);
+              return RequestsListCard(bgColor:  FrontEndConfig.kTextFieldFontColor,firstButtonTitle: 'accept'.tr(), userName: friendsRequestList[index].userName,requestSenderName: friendsRequestList[index].requestSenderName , skills: friendsRequestList[index].skills,);
             },
           ),
           Padding(
@@ -56,7 +57,7 @@ class _FriendsRequestBodyState extends State<FriendsRequestBody> {
               height: 20,
               width: MediaQuery.of(context).size.width,
               child:  CustomText(
-                text: 'Suggestions',
+                text: 'suggestions'.tr(),
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
                 textColor: FrontEndConfig.kGrayTextColor,
@@ -69,7 +70,7 @@ class _FriendsRequestBodyState extends State<FriendsRequestBody> {
             itemCount: suggestionsList.length,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return RequestsListCard(bgColor:  FrontEndConfig.kTextFieldFontColor,isSecondButton: false, width: .2 ,mainAxisAlignment: MainAxisAlignment.end, firstButtonTitle: 'Send request', userName: friendsRequestList[index].userName,requestSenderName: friendsRequestList[index].requestSenderName , skills: friendsRequestList[index].skills,);
+              return RequestsListCard(bgColor:  FrontEndConfig.kTextFieldFontColor,isSecondButton: false, width: .2 ,mainAxisAlignment: MainAxisAlignment.end, firstButtonTitle: 'send_request'.tr(), userName: friendsRequestList[index].userName,requestSenderName: friendsRequestList[index].requestSenderName , skills: friendsRequestList[index].skills,);
             },
           ),
 

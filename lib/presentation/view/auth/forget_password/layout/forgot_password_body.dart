@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/view/auth/new_password/new_password_view.dart';
 
@@ -41,12 +42,12 @@ class _ForgotPasswordBodyState extends State<ForgotPasswordBody> {
                   width: ScreenSize().height(context, 0.2),
                   child: const Image(image: AssetImage('assets/images/logo.png'))),
               SizedBox(height: ScreenSize().height(context, 0.05),),
-              CustomText(text: 'Reset your password', fontSize: 14, fontWeight: FontWeight.w500, textColor: Colors.white, fontFamily: 'Roboto',),
+              CustomText(text: 'reset_your_password'.tr(), fontSize: 14, fontWeight: FontWeight.w500, textColor: Colors.white, fontFamily: 'Roboto',),
               SizedBox(
                   width: ScreenSize().width(context, 0.14),
                   child: Divider(height: ScreenSize().height(context, 0.04) , color: Colors.white,thickness: 3,)),
               SizedBox(height: ScreenSize().height(context, 0.018),),
-              CustomText(text: 'Can’t remember my password', fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',),
+              CustomText(text: 'cant_not_remember'.tr(), fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',),
               SizedBox(height: ScreenSize().height(context, 0.018),),
               Container(
                 width: ScreenSize().height(context, 1),
@@ -54,12 +55,12 @@ class _ForgotPasswordBodyState extends State<ForgotPasswordBody> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
 
-                    CustomTextField(textInputType: TextInputType.emailAddress , controller: _emailController, fieldName: 'Username / Email' , isPass: false),
+                    CustomTextField(textInputType: TextInputType.emailAddress , controller: _emailController, fieldName: 'user/email'.tr() , isPass: false),
                     SizedBox(height: ScreenSize().height(context, 0.030),),
                     Container(
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         alignment: Alignment.centerLeft,
-                        child: CustomText(text: 'Enter code', fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',)),
+                        child: CustomText(text: 'enter_code'.tr(), fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kTextFieldFontColor, fontFamily: 'Roboto',)),
                     Container(
                       child: Row(
                         children: [
@@ -80,9 +81,9 @@ class _ForgotPasswordBodyState extends State<ForgotPasswordBody> {
                         child: CustomButton(
                           onPress: (){
                             NavigationHelper.pushRoute(context, const NewPasswordView());
-                            print('Forgor Password Body');
+
                           },
-                          text: 'Verify Code', fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.arrow_forward_sharp,),
+                          text: 'verify_code'.tr(), fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.arrow_forward_sharp,),
                       ),
 
                     ),
@@ -90,7 +91,7 @@ class _ForgotPasswordBodyState extends State<ForgotPasswordBody> {
                     Container(
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         alignment: Alignment.centerLeft,
-                        child: CustomText(text: 'The code will be sent to your mail if the email / username entered is correct', fontSize: 9, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',)),
+                        child: CustomText(text: 'the_code_will_send_email/username'.tr(), fontSize: 9, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',)),
                   ],
                 ),
               ),

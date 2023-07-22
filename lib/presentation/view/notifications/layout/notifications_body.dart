@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/models/notifications_model.dart';
 import 'package:spish/presentation/view/notifications/widgets/notifications_list_model.dart';
@@ -34,7 +35,7 @@ class _NotificationsBodyState extends State<NotificationsBody> {
               height: 20,
               width: MediaQuery.of(context).size.width,
               child: CustomText(
-                text: 'Notifications',
+                text: 'notifications'.tr(),
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
                 textColor: FrontEndConfig.kGrayTextColor,

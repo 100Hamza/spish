@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_text.dart';
 import 'package:spish/presentation/utils/screen_size.dart';
@@ -48,21 +49,21 @@ class _MultiLineGraphViewState extends State<MultiLineGraphView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomText(
-                        text: 'Pending Task',
+                        text: 'pending_task'.tr(),
                         fontSize:   8,
                         fontWeight: FontWeight.w500,
                         fontFamily: 'Roboto',
                         textColor: FrontEndConfig.kDarkBgColor,
                       ),
                       CustomText(
-                        text: 'Posts',
+                        text: 'posts'.tr(),
                         fontSize:   8,
                         fontWeight: FontWeight.w500,
                         fontFamily: 'Roboto',
                         textColor: FrontEndConfig.kDarkBgColor,
                       ),
                       CustomText(
-                        text: 'Reports',
+                        text: 'reports'.tr(),
                         fontSize:   8,
                         fontWeight: FontWeight.w500,
                         fontFamily: 'Roboto',

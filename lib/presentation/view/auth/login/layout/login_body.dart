@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/view/auth/forget_password/forgot_password_view.dart';
 import 'package:spish/presentation/view/auth/registration/registration_view.dart';
@@ -36,22 +37,22 @@ class _LoginBodyState extends State<LoginBody> {
                   width: ScreenSize().height(context, 0.2),
                   child: const Image(image: AssetImage('assets/images/logo.png'))),
               SizedBox(height: ScreenSize().height(context, 0.034),),
-              CustomText(text: 'Login to Spish Community', fontSize: 14, fontWeight: FontWeight.w500, textColor: Colors.white, fontFamily: 'Roboto',),
+              CustomText(text: 'login_to_spish'.tr(), fontSize: 14, fontWeight: FontWeight.w500, textColor: Colors.white, fontFamily: 'Roboto',),
               SizedBox(
                   width: ScreenSize().width(context, 0.14),
                   child: Divider(height: ScreenSize().height(context, 0.04) , color: Colors.white,thickness: 3,)),
               SizedBox(height: ScreenSize().height(context, 0.02),),
               Container(
                   alignment: Alignment.center,
-                  child: CustomText(text: 'Hey!! You are missing out !!!', fontSize: 10, fontWeight: FontWeight.w400, textColor: FrontEndConfig.kGrayTextColor, fontFamily: 'Roboto',)),
+                  child: CustomText(text: 'hey!!!_you'.tr(), fontSize: 10, fontWeight: FontWeight.w400, textColor: FrontEndConfig.kGrayTextColor, fontFamily: 'Roboto',)),
               SizedBox(height: ScreenSize().height(context, 0.025),),
               SizedBox(
                 width: ScreenSize().height(context, 1),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomTextField(textInputType: TextInputType.emailAddress , controller: _emailController, fieldName: 'Username / Email' , isPass: false),
-                    CustomTextField(textInputType: TextInputType.visiblePassword , controller: _passController, fieldName: 'Password' , isPass: true),
+                    CustomTextField(textInputType: TextInputType.emailAddress , controller: _emailController, fieldName: 'user/email'.tr() , isPass: false),
+                    CustomTextField(textInputType: TextInputType.visiblePassword , controller: _passController, fieldName: 'password'.tr() , isPass: true),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Column(
@@ -60,10 +61,9 @@ class _LoginBodyState extends State<LoginBody> {
                             alignment: Alignment.centerRight,
                               child: InkWell(
                                   onTap: (){
-                                    print('Can\'t Remember ?');
                                     NavigationHelper.pushRoute(context, const ForgotPasswordView());
                                   },
-                                  child: CustomText(text: 'Forgot your password', fontSize: 9, fontWeight: FontWeight.w400, textColor: FrontEndConfig.kCanNotRememberTextColor, fontFamily: 'Roboto',))),
+                                  child: CustomText(text: 'forget_you_password'.tr(), fontSize: 9, fontWeight: FontWeight.w400, textColor: FrontEndConfig.kCanNotRememberTextColor, fontFamily: 'Roboto',))),
                           const SizedBox(height: 5,),
                           SizedBox(height: ScreenSize().height(context, 0.015),),
                           Container(
@@ -72,7 +72,7 @@ class _LoginBodyState extends State<LoginBody> {
                                   onTap: (){
                                     NavigationHelper.pushRoute(context, const RegistrationView());
                                   },
-                                  child: CustomText(text: 'Yet to be a member ?', fontSize: 10, fontWeight: FontWeight.w400, textColor: FrontEndConfig.kGrayTextColor, fontFamily: 'Roboto',))),
+                                  child: CustomText(text: 'yet_to_be'.tr(), fontSize: 10, fontWeight: FontWeight.w400, textColor: FrontEndConfig.kGrayTextColor, fontFamily: 'Roboto',))),
 
                         ],),
                     ),
@@ -85,7 +85,7 @@ class _LoginBodyState extends State<LoginBody> {
                             NavigationHelper.pushRoute(context, const SubscribeToPremiumView());
 
                           },
-                          text: 'Login', fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.directions_run,),
+                          text: 'login'.tr(), fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.directions_run,),
                       ),
                     )
                   ],

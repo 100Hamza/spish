@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_button.dart';
 import 'package:spish/presentation/view/admin%20panel/premium_discount/widgets/curved_button.dart';
@@ -6,6 +7,7 @@ import '../../../../../ui_config/front_end_config.dart';
 import '../../../../elements/custom_text.dart';
 import '../../../../utils/screen_size.dart';
 import '../../../../utils/toast.dart';
+import '../../../add_report/layout/widgets/dropdown.dart';
 import '../../analytics/widgets/post_acitivty.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -41,20 +43,19 @@ class _PremiumDiscountBodyState extends State<PremiumDiscountBody> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomText(
-                          text: 'Subscription for',
+                          text: 'subscription_for'.tr(),
                           fontSize:   15,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: Colors.white,
                         ),
-
-                        CustomText(
-                          text: '12 months',
-                          fontSize:   15,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Roboto',
-                          textColor: Colors.white,
-                        ),
+                        Container(
+                          width:  ScreenSize().width(context, 0.27),
+                            child: CustomDropDown(
+                                isTitle: false,
+                                height: 0.025,
+                                padding: 0.0,
+                                items: ['12 ${'months'.tr()}' , '6 ${'months'.tr()}' , '3 ${'months'.tr()}'])),
 
                       ],
                     ),
@@ -91,7 +92,7 @@ class _PremiumDiscountBodyState extends State<PremiumDiscountBody> {
                           child: Column(
                             children: [
                               CustomText(
-                                text: 'Manage Discount',
+                                text: 'manage_discount'.tr(),
                                 fontSize:   10,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: 'Roboto',
@@ -109,7 +110,7 @@ class _PremiumDiscountBodyState extends State<PremiumDiscountBody> {
                                   ),
                                   SizedBox(width: 10,),
                                   CustomText(
-                                    text: 'discount',
+                                    text: 'discounts'.tr(),
                                     fontSize:   10,
                                     fontWeight: FontWeight.w600,
                                     fontFamily: 'Roboto',
@@ -147,14 +148,14 @@ class _PremiumDiscountBodyState extends State<PremiumDiscountBody> {
                       ],
                     ),
                     SizedBox(height: 20,),
-                    CurvedButton(text: 'Give Discound of \$5 to the selected member(s)', textColor: Colors.white , borderColor: Colors.white, fontSize: 10 , fontWeight: FontWeight.w300),
+                    CurvedButton(text: 'give_discount_of'.tr(), textColor: Colors.white , borderColor: Colors.white, fontSize: 10 , fontWeight: FontWeight.w300),
                   ],
                 ),
               ),
 
               SizedBox(height: ScreenSize().height(context, 0.02),),
               CustomText(
-                text: '12 months Premium Members',
+                text: '12_months_premium'.tr(),
                 fontSize:   15,
                 fontWeight: FontWeight.w500,
                 fontFamily: 'Roboto',
@@ -171,7 +172,7 @@ class _PremiumDiscountBodyState extends State<PremiumDiscountBody> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomText(
-                      text: 'Post Activity',
+                      text: 'top_embers'.tr(),
                       fontSize: 10,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',
@@ -182,42 +183,42 @@ class _PremiumDiscountBodyState extends State<PremiumDiscountBody> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomText(
-                          text: 'Profile Pic',
+                          text: 'profile_picture'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'Name',
+                          text: 'name'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'UserName',
+                          text: 'user_name'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'Date Posted',
+                          text: 'memb_since'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'No. of Views',
+                          text: 'memb_till'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
                           textColor: FrontEndConfig.kCommentTitleTextColor,
                         ),
                         CustomText(
-                          text: 'Member',
+                          text: 'member'.tr(),
                           fontSize: 8,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
@@ -231,7 +232,7 @@ class _PremiumDiscountBodyState extends State<PremiumDiscountBody> {
                       shrinkWrap: true,
                       itemCount: 3,
                       itemBuilder: (context, index) {
-                        return PostActivity(name: 'Waleed', userName: '@waleed', datePosted: '07/15', numberOfViews: '10k',);
+                        return PostActivity(name: 'Waleed', userName: '@waleed', datePosted: '07/15', numberOfViews: 'Till Now', isTill: true,);
                       },)
 
                   ],

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/utils/screen_size.dart';
 import 'package:spish/presentation/view/admin%20panel/overview/graphs/multiple_lines_graph/multi_line_graph_view.dart';
@@ -37,7 +38,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 16.0),
                   child: CustomText(
-                    text: 'Overview',
+                    text: 'overview'.tr(),
                     fontSize:   20,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'Roboto',
@@ -92,7 +93,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                                         textColor: FrontEndConfig.kCommentTitleTextColor,
                                       ),
                                       CustomText(
-                                        text: 'Users',
+                                        text: 'users'.tr(),
                                         fontSize:   10,
                                         fontWeight: FontWeight.w400,
                                         fontFamily: 'Roboto',
@@ -187,7 +188,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                                         width: 60,
                                         alignment: Alignment.centerRight,
                                         child: CustomText(
-                                          text: 'Free Users',
+                                          text: 'premium_users'.tr(),
                                           fontSize:   6,
                                           fontWeight: FontWeight.w400,
                                           fontFamily: 'Roboto',
@@ -201,7 +202,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                                       Container(
                                         width: 60,
                                         child: CustomText(
-                                          text: 'Free Users',
+                                          text: 'free_users'.tr(),
                                           fontSize:   6,
                                           fontWeight: FontWeight.w400,
                                           fontFamily: 'Roboto',
@@ -237,7 +238,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             CustomText(
-                              text: 'User Engagement',
+                              text: 'user_engagement'.tr(),
                               fontSize:   10,
                               fontWeight: FontWeight.w500,
                               fontFamily: 'Roboto',
@@ -269,7 +270,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                       child: Column(
                         children: [
                           CustomText(
-                            text: 'Reported Contents',
+                            text: 'reported_contents'.tr(),
                             fontSize:   16,
                             fontWeight: FontWeight.w700,
                             fontFamily: 'Roboto',
@@ -294,7 +295,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                                           textColor: FrontEndConfig.kCommentTitleTextColor,
                                         ),
                                         CustomText(
-                                          text: 'Reported Messages',
+                                          text: 'reported_messages'.tr(),
                                           fontSize:   10,
                                           fontWeight: FontWeight.w500,
                                           fontFamily: 'Roboto',
@@ -319,7 +320,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                                           textColor: FrontEndConfig.kCommentTitleTextColor,
                                         ),
                                         CustomText(
-                                          text: 'Reported Posts',
+                                          text: 'reported_post'.tr(),
                                           fontSize:   10,
                                           fontWeight: FontWeight.w500,
                                           fontFamily: 'Roboto',
@@ -352,7 +353,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomText(
-                    text: 'Financial Overview',
+                    text: 'financial_overview'.tr(),
                     fontSize:   10,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'Roboto',
@@ -378,7 +379,7 @@ class _OverViewBodyState extends State<OverViewBody> {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 8.0),
                                   child: CustomText(
-                                    text: 'Monthly Revenue',
+                                    text: 'monthly_revenue'.tr(),
                                     fontSize:   10,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: 'Roboto',

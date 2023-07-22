@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/utils/screen_size.dart';
 import 'package:spish/ui_config/front_end_config.dart';
@@ -35,7 +36,7 @@ class SearchTextField extends StatelessWidget {
         cursorColor: FrontEndConfig.kSearchIconColor,
         decoration: InputDecoration(
           prefixIcon: Icon(Icons.search , color: FrontEndConfig.kSearchIconColor,),
-            hintText: 'Search Filter',
+            hintText: 'search_and_filter'.tr(),
             hintStyle: TextStyle(color: FrontEndConfig.kSearchIconColor),
             contentPadding: const EdgeInsets.symmetric(vertical: 3 , horizontal: 1),
             filled: true,

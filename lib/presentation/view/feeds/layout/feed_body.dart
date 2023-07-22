@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_appbar.dart';
 
@@ -32,7 +33,7 @@ class _FeedBodyState extends State<FeedBody> {
           children: [
 
             widget.isAppBar? const CustomAppBar() : Container(),
-            widget.isSearch == true ? NewsFeedSearch(title: 'News feed' ,isIcon: false,) : Container(),
+            widget.isSearch == true ? NewsFeedSearch(title: 'new_feed'.tr() ,isIcon: false,) : Container(),
             widget.isPost ? const CreatePost() : Container(),
             widget.isPost ? const CreatePostDivider() : Container(),
             Expanded(

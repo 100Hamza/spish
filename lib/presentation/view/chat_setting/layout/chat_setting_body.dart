@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/elements/custom_text.dart';
 import 'package:spish/presentation/models/sender_model.dart';
@@ -65,7 +66,7 @@ class _ChatSettingBodyState extends State<ChatSettingBody> {
                 SizedBox(
                   height: ScreenSize().height(context, 0.02),
                 ),
-                SettingText(settingText: 'Appearance'),
+                SettingText(settingText: 'appearance'.tr()),
                 SizedBox(
                   height: ScreenSize().height(context, 0.01),
                 ),
@@ -77,13 +78,13 @@ class _ChatSettingBodyState extends State<ChatSettingBody> {
                   child: Column(
                     children: [
                       ChatSettingListTiles(
-                        title: 'WallPaper',
-                        subtitle: 'App default: Black',
+                        title: 'wallpaper'.tr(),
+                        subtitle: 'app_default_black'.tr(),
                         icon: Icons.wallpaper_rounded,
                       ),
                       ChatSettingListTiles(
-                        title: 'WallPaper',
-                        subtitle: 'App default: Black',
+                        title: 'font_size'.tr(),
+                        subtitle: 'app_default_14x'.tr(),
                         icon: Icons.format_size_outlined,
                       ),
                     ],
@@ -92,7 +93,7 @@ class _ChatSettingBodyState extends State<ChatSettingBody> {
                 SizedBox(
                   height: ScreenSize().height(context, 0.01),
                 ),
-                SettingText(settingText: 'Notification'),
+                SettingText(settingText: 'notifications'.tr()),
                 SizedBox(
                   height: ScreenSize().height(context, 0.01),
                 ),
@@ -103,8 +104,8 @@ class _ChatSettingBodyState extends State<ChatSettingBody> {
                   child: Column(
                     children: [
                       ChatSettingListTiles(
-                          title: 'Notifications',
-                          subtitle: 'App default: Black',
+                          title: 'notifications'.tr(),
+                          subtitle: '',
                           icon: Icons.power_settings_new_outlined,
                           widget: Switch(
                             activeColor:
@@ -118,7 +119,7 @@ class _ChatSettingBodyState extends State<ChatSettingBody> {
                             },
                           )),
                       ChatSettingListTiles(
-                          title: 'Sound',
+                          title: 'sound'.tr(),
                           subtitle: '',
                           icon: Icons.queue_music_sharp),
                     ],
@@ -137,19 +138,19 @@ class _ChatSettingBodyState extends State<ChatSettingBody> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomText(
-                          text: 'Clear chats',
+                          text: 'clear_chats'.tr(),
                           fontFamily: 'Roboto',
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           textColor: FrontEndConfig.kBlockTextColor),
                       CustomText(
-                          text: 'Block Muhammad',
+                          text: 'block_name'.tr(),
                           fontFamily: 'Roboto',
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           textColor: FrontEndConfig.kBlockTextColor),
                       CustomText(
-                          text: 'Unfriend Muhammad',
+                          text: 'Unfriend Muhammad'.tr(),
                           fontFamily: 'Roboto',
                           fontSize: 12,
                           fontWeight: FontWeight.w400,

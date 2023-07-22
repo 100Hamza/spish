@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:floating_bottom_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -84,7 +85,7 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.home, color: bottomNavigationProvider.getIndex == 0? FrontEndConfig.kFabColors: Colors.grey, size: 20,),
-                        CustomText(text: 'News Feed', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 0? FrontEndConfig.kFabColors: Colors.grey, fontFamily: 'Roboto',),
+                        CustomText(text: 'new_feed'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 0? FrontEndConfig.kFabColors: Colors.grey, fontFamily: 'Roboto',),
                       ],
                     ),
                   ),
@@ -101,7 +102,7 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.auto_graph_rounded, color: bottomNavigationProvider.getIndex == 1? FrontEndConfig.kFabColors: Colors.grey, size: 20,),
-                        CustomText(text: 'Reports', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 1? FrontEndConfig.kFabColors: Colors.grey, fontFamily: 'Roboto',),
+                        CustomText(text: 'reports'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 1? FrontEndConfig.kFabColors: Colors.grey, fontFamily: 'Roboto',),
                       ],
                     ),
                   ),
@@ -117,7 +118,7 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.person_rounded, color: bottomNavigationProvider.getIndex == 2? FrontEndConfig.kFabColors: Colors.grey, size: 20,),
-                        CustomText(text: 'Notifications', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 2? FrontEndConfig.kFabColors: Colors.grey, fontFamily: 'Roboto',),
+                        CustomText(text: 'notifications'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 2? FrontEndConfig.kFabColors: Colors.grey, fontFamily: 'Roboto',),
                       ],
                     ),
                   ),
@@ -133,7 +134,7 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.report, color: bottomNavigationProvider.getIndex == 3? FrontEndConfig.kFabColors: Colors.grey, size: 20,),
-                        CustomText(text: 'Friends', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 3? FrontEndConfig.kFabColors: Colors.grey, fontFamily: 'Roboto',),
+                        CustomText(text: 'friends'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 3? FrontEndConfig.kFabColors: Colors.grey, fontFamily: 'Roboto',),
                       ],
                     ),
                   ),

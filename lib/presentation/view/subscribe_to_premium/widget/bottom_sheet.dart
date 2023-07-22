@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:spish/navigation_helper/navigation_helper.dart';
@@ -51,7 +52,7 @@ Widget draggableBottomSheer() {
                       child: Row(
                         children: [
                           CustomText(
-                            text: 'COMMENTS',
+                            text: 'comments'.tr(),
                             fontSize: 10,
                             fontWeight: FontWeight.w500,
                             textColor: Colors.white,
@@ -65,7 +66,7 @@ Widget draggableBottomSheer() {
                               NavigationHelper.pushRoute(context, SubscribeToPremiumView());
                             },
                             child: CustomGradientText(
-                              text: 'Subscribe now',
+                              text: 'subscribe_now'.tr(),
                               fontSize: 9,
                               fontWeight: FontWeight.w300,
                               textColor: Colors.white,
@@ -84,13 +85,13 @@ Widget draggableBottomSheer() {
                           borderRadius: BorderRadius.circular(5)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Text(
-                            'You need a premium account to be able to comment',
-                            style: TextStyle(
+                            'you_need_a_premium_account'.tr(),
+                            style: const TextStyle(
                                 fontSize: 10, color: Color(0xFFD9D9D9)),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.not_interested,
                             color: Colors.red,
                             size: 10,

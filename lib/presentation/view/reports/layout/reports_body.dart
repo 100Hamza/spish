@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/navigation_helper/navigation_helper.dart';
 import 'package:spish/presentation/models/reports_model.dart';
@@ -24,7 +25,7 @@ class _ReportsBodyState extends State<ReportsBody> {
         child: Column(
           children: [
             const CustomAppBar(),
-            NewsFeedSearch(isIcon: false, title: 'Reports'),
+            NewsFeedSearch(isIcon: false, title: 'reports'.tr()),
             Padding(
               padding: const EdgeInsets.only(bottom: 10.0, left: 20),
               child: Container(
@@ -32,7 +33,7 @@ class _ReportsBodyState extends State<ReportsBody> {
                 height: 20,
                 width: MediaQuery.of(context).size.width,
                 child: CustomText(
-                  text: 'Individual Reports',
+                  text: 'individual_report'.tr(),
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                   textColor: Colors.white,

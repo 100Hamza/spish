@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -27,11 +28,11 @@ class PieChart2State extends State {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const <Widget>[
+              children:  <Widget>[
                 Indicator(
                   fontSize: 14,
                   color: FrontEndConfig.kDeepPurple,
-                  text: 'Home',
+                  text: 'home_page'.tr(),
                   isSquare: true,
                 ),
                 SizedBox(
@@ -40,7 +41,7 @@ class PieChart2State extends State {
                 Indicator(
                   fontSize: 14,
                   color: FrontEndConfig.kRegisteredUsersPiBarFreeUserColor,
-                  text: 'Notifications Page',
+                  text: 'notification_page'.tr(),
                   isSquare: true,
                 ),
                 SizedBox(
@@ -49,7 +50,7 @@ class PieChart2State extends State {
                 Indicator(
                   fontSize: 14,
                   color: FrontEndConfig.contentColorPurple,
-                  text: 'Message Page',
+                  text: 'messages_page'.tr(),
                   isSquare: true,
                 ),
 

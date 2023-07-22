@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/view/auth/widgets/otp_textfield.dart';
 
@@ -43,12 +44,12 @@ class _VerifyAccountBodyState extends State<VerifyAccountBody> {
                   width: ScreenSize().height(context, 0.2),
                   child: const Image(image: AssetImage('assets/images/logo.png'))),
               SizedBox(height: ScreenSize().height(context, 0.05),),
-              CustomText(text: 'Verify your account', fontSize: 14, fontWeight: FontWeight.w500, textColor: Colors.white, fontFamily: 'Roboto',),
+              CustomText(text: 'verify_your_account'.tr(), fontSize: 14, fontWeight: FontWeight.w500, textColor: Colors.white, fontFamily: 'Roboto',),
               SizedBox(
                   width: ScreenSize().width(context, 0.14),
                   child: Divider(height: ScreenSize().height(context, 0.04) , color: Colors.white,thickness: 3,)),
               SizedBox(height: ScreenSize().height(context, 0.018),),
-              CustomText(text: 'A main has been sent to yout email    ', fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',),
+              CustomText(text: 'a_mail_has_been'.tr(), fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',),
               Container(
                 width: ScreenSize().height(context, 1),
                 child: Column(
@@ -58,7 +59,7 @@ class _VerifyAccountBodyState extends State<VerifyAccountBody> {
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       alignment: Alignment.centerLeft,
-                        child: CustomText(text: 'Enter the code that was sent to your email', fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',)),
+                        child: CustomText(text: 'enter_the_code'.tr(), fontSize: 10, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',)),
                     Container(
                       child: Row(
                         children: [
@@ -80,7 +81,7 @@ class _VerifyAccountBodyState extends State<VerifyAccountBody> {
                           onPress: (){
                             NavigationHelper.pushRoute(context, const AccountVerifiedView());
                           },
-                          text: 'Verify Code', fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.arrow_forward_sharp,),
+                          text: 'verify_code'.tr(), fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.arrow_forward_sharp,),
                       ),
 
                     ),
@@ -88,7 +89,7 @@ class _VerifyAccountBodyState extends State<VerifyAccountBody> {
                     Container(
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         alignment: Alignment.centerLeft,
-                        child: CustomText(text: 'The code will be sent to your mail  if the email entered is correct', fontSize: 9, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',)),
+                        child: CustomText(text: 'the_code_will_send'.tr(), fontSize: 9, fontWeight: FontWeight.w300, textColor: FrontEndConfig.kLightGrayTextColor, fontFamily: 'Roboto',)),
                   ],
                 ),
               ),

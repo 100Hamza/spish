@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dotted_border/dotted_border.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -46,7 +47,7 @@ class _CompDetailsState extends State<CompDetails> {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: CustomText(
-                  text: 'Create New Ad',
+                  text: 'create_new_ad'.tr(),
                   fontSize: 25,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'Roboto',
@@ -59,7 +60,7 @@ class _CompDetailsState extends State<CompDetails> {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: CustomText(
-                  text: 'Complete your ads details, to engage with your audience',
+                  text: 'complete_your_ads'.tr(),
                   fontSize: 9,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'Roboto',
@@ -72,7 +73,7 @@ class _CompDetailsState extends State<CompDetails> {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: CustomText(
-                  text: 'Company Logo',
+                  text: 'company_logo'.tr(),
                   fontSize: 20,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'Roboto',
@@ -128,14 +129,14 @@ class _CompDetailsState extends State<CompDetails> {
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
                                   CustomText(
-                                    text: 'Drag and Drop your Image here',
+                                    text: 'drag_and_drop'.tr(),
                                     fontSize: 12,
                                     fontWeight: FontWeight.w200,
                                     fontFamily: 'Roboto',
                                     textColor: FrontEndConfig.kGrayTextColor,
                                   ),
                                   CustomText(
-                                    text: 'Or',
+                                    text: 'or'.tr(),
                                     fontSize: 12,
                                     fontWeight: FontWeight.w200,
                                     fontFamily: 'Roboto',
@@ -144,7 +145,7 @@ class _CompDetailsState extends State<CompDetails> {
                                   Column(
                                     children: [
                                       CustomText(
-                                        text: 'Choose image',
+                                        text: 'choose_image'.tr(),
                                         fontSize: 14,
                                         fontWeight: FontWeight.w400,
                                         fontFamily: 'Roboto',
@@ -170,23 +171,23 @@ class _CompDetailsState extends State<CompDetails> {
               ),
               CustomTextField(
                 isTitle: true,
-                fieldName: 'Company Name',
+                fieldName: 'company_name'.tr(),
                 isHintText: true,
-                hintText: 'Ex: FlutterWave',
+                hintText: 'ex_flutter_wave'.tr(),
                 isFilled: true,
                 textInputType: TextInputType.text,
               ),
               CustomTextField(
                 isTitle: true,
-                fieldName: 'Company Location',
+                fieldName: 'company_location'.tr(),
                 isHintText: true,
-                hintText: 'Los Angeles, USA',
+                hintText: 'los_angeles'.tr(),
                 isFilled: true,
                 textInputType: TextInputType.text,
               ),
               CustomTextField(
                 isTitle: true,
-                fieldName: 'Company Website ',
+                fieldName: 'company_website'.tr(),
                 isHintText: false,
                 isFilled: true,
                 textInputType: TextInputType.text,
@@ -200,7 +201,7 @@ class _CompDetailsState extends State<CompDetails> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CustomGradientOutlinedButton(
-                      text: 'Go Back',
+                      text: 'go_back'.tr(),
                       width: 0.39,
                       height: 40,
                       fontSize: 16,
@@ -214,7 +215,7 @@ class _CompDetailsState extends State<CompDetails> {
                         onPress: () {
                           // NavigationHelper.pushRoute(context, const SubscribeToPremiumView());
                         },
-                        text: 'Next',
+                        text: 'next'.tr(),
                         fontColor: Colors.white,
                         width: 0.39,
                         isIcon: true,

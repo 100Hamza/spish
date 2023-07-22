@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dotted_border/dotted_border.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -50,7 +51,7 @@ class _SpishReportBodyState extends State<SpishReportBody> {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: CustomText(
-                  text: 'Spish Reports',
+                  text: 'spish_report'.tr(),
                   fontSize: 25,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'Roboto',
@@ -63,7 +64,7 @@ class _SpishReportBodyState extends State<SpishReportBody> {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: CustomText(
-                  text: 'Report Image',
+                  text: 'report_image'.tr(),
                   fontSize: 20,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'Roboto',
@@ -122,14 +123,14 @@ class _SpishReportBodyState extends State<SpishReportBody> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             CustomText(
-                              text: 'Drag and Drop your Image here',
+                              text: 'drag_and_drop'.tr(),
                               fontSize: 12,
                               fontWeight: FontWeight.w200,
                               fontFamily: 'Roboto',
                               textColor: FrontEndConfig.kGrayTextColor,
                             ),
                             CustomText(
-                              text: 'Or',
+                              text: 'or'.tr(),
                               fontSize: 12,
                               fontWeight: FontWeight.w200,
                               fontFamily: 'Roboto',
@@ -138,7 +139,7 @@ class _SpishReportBodyState extends State<SpishReportBody> {
                             Column(
                               children: [
                                 CustomText(
-                                  text: 'Choose image',
+                                  text: 'choose_image'.tr(),
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: 'Roboto',
@@ -167,7 +168,7 @@ class _SpishReportBodyState extends State<SpishReportBody> {
                   Expanded(
                     child: CustomTextField(
                       isTitle: true,
-                      fieldName: 'Name',
+                      fieldName: 'name'.tr(),
                       isHintText: true,
                       hintText: 'Reporter Name',
                       isFilled: true,
@@ -175,21 +176,21 @@ class _SpishReportBodyState extends State<SpishReportBody> {
                     ),
                   ),
                   Expanded(
-                    child: CustomDropDown(dropDownTitle: 'Report Category',),
+                    child: CustomDropDown(dropDownTitle: 'report_category'.tr(),),
                   ),
                 ],
               ),
               CustomTextField(
                 isTitle: true,
-                fieldName: 'Location',
+                fieldName: 'location'.tr(),
                 isHintText: true,
-                hintText: 'Ex: Los Angeles, USA',
+                hintText: 'los_angeles'.tr(),
                 isFilled: true,
                 textInputType: TextInputType.text,
               ),
               CustomTextField(
                 isTitle: true,
-                fieldName: 'More ',
+                fieldName: 'more'.tr(),
                 isHintText: false,
                 isFilled: true,
                 textInputType: TextInputType.text,
@@ -202,8 +203,8 @@ class _SpishReportBodyState extends State<SpishReportBody> {
                 maxLines: 5,
                 height: .14,
                 textInputType: TextInputType.multiline,
-                fieldName: 'Description',
-                hintText: 'Write something about yourself!',
+                fieldName: 'description'.tr(),
+                hintText: 'write_something_about'.tr(),
               ),
               Container(
                 alignment: Alignment.center,
@@ -211,7 +212,7 @@ class _SpishReportBodyState extends State<SpishReportBody> {
                   onPress: (){
                     NavigationHelper.pushRoute(context, const SpishReportBoardView());
                   },
-                  text: 'Post New Ad', fontColor: Colors.white, width: 0.39, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w300, fontSize: 14, isIcon: false),
+                  text: 'post_new_ad'.tr(), fontColor: Colors.white, width: 0.39, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w300, fontSize: 14, isIcon: false),
               )
 
             ],

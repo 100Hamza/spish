@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/view/admin%20panel/ads_managment/ads_managment_overview.dart';
 
@@ -32,7 +33,7 @@ class _PostAdState extends State<PostAd> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomText(
-                    text: 'Post New Ad',
+                    text: 'post_new_ad'.tr(),
                     fontSize: 25,
                     fontWeight: FontWeight.w400,
                     fontFamily: 'Roboto',
@@ -65,7 +66,7 @@ class _PostAdState extends State<PostAd> {
                   ),
                   Expanded(
                     child: CustomText(
-                      text: 'I an 100% sure that i proviede correct details about the Ad.',
+                      text: 'i_am_100_sure'.tr(),
                       fontSize: 16,
                       fontWeight: FontWeight.w300,
                       fontFamily: 'Roboto',
@@ -90,7 +91,7 @@ class _PostAdState extends State<PostAd> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomGradientOutlinedButton(
-                    text: 'Go Back',
+                    text: 'go_back'.tr(),
                     width: 0.39,
                     height: 40,
                     fontSize: 16,
@@ -105,7 +106,7 @@ class _PostAdState extends State<PostAd> {
                         // NavigationHelper.pushRoute(context, const AdsManagementOverView());
                         Navigator.pop(context);
                       },
-                      text: 'Post New Ad',
+                      text: 'post_new_ad'.tr(),
                       fontColor: Colors.white,
                       width: 0.39,
                       isIcon: false,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spish/presentation/view/admin%20panel/ads_managment/widgets/add_creatd_list_model.dart';
 import 'package:spish/presentation/view/admin%20panel/new_ad/new_ad_view.dart';
@@ -39,7 +40,7 @@ class _AdsManagementBodyState extends State<AdsManagementBody> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 16.0),
                   child: CustomText(
-                    text: 'Ad Management',
+                    text: 'ad_management'.tr(),
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'Roboto',
@@ -71,7 +72,7 @@ class _AdsManagementBodyState extends State<AdsManagementBody> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomText(
-                        text: 'No. Ad click',
+                        text: 'no_ad_click'.tr(),
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         textColor: Colors.white,
@@ -98,7 +99,7 @@ class _AdsManagementBodyState extends State<AdsManagementBody> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CustomText(
-                      text: 'Amount earn',
+                      text: 'amount_earn'.tr(),
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Roboto',
@@ -155,7 +156,7 @@ class _AdsManagementBodyState extends State<AdsManagementBody> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomText(
-                          text: 'Ad Created',
+                          text: 'ad_created'.tr(),
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Roboto',
@@ -170,7 +171,7 @@ class _AdsManagementBodyState extends State<AdsManagementBody> {
                                 NavigationHelper.pushRoute(
                                     context, const NewAdView());
                               },
-                              text: 'New',
+                              text: 'new'.tr(),
                               fontColor: Colors.white,
                               height: 35,
                               width: 0.26,
@@ -192,28 +193,28 @@ class _AdsManagementBodyState extends State<AdsManagementBody> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CustomText(
-                            text: 'Logo',
+                            text: 'logo'.tr(),
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'Roboto',
                             textColor: FrontEndConfig.kCommentTitleTextColor,
                           ),
                           CustomText(
-                            text: 'Name',
+                            text: 'name'.tr(),
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'Roboto',
                             textColor: FrontEndConfig.kCommentTitleTextColor,
                           ),
                           CustomText(
-                            text: 'Ad Name',
+                            text: 'ad_name'.tr(),
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'Roboto',
                             textColor: FrontEndConfig.kCommentTitleTextColor,
                           ),
                           CustomText(
-                            text: 'Date',
+                            text: 'date'.tr(),
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'Roboto',

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:spish/presentation/view/admin%20panel/ads_managment/ads_managment_overview.dart';
@@ -81,7 +82,7 @@ class _AdminHomeState extends State<AdminHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.speed, color: bottomNavigationProvider.getIndex == 0? Colors.black: Colors.grey, size: 20,),
-                      CustomText(text: 'Overview', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 0? Colors.black: Colors.grey, fontFamily: 'Roboto',),
+                      CustomText(text: 'overview'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 0? Colors.black: Colors.grey, fontFamily: 'Roboto',),
                     ],
                   ),
                 ),
@@ -98,7 +99,7 @@ class _AdminHomeState extends State<AdminHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.auto_graph_rounded, color: bottomNavigationProvider.getIndex == 1? Colors.black: Colors.grey, size: 20,),
-                      CustomText(text: 'Analytics', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 1? Colors.black: Colors.grey, fontFamily: 'Roboto',),
+                      CustomText(text: 'analytics'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 1? Colors.black: Colors.grey, fontFamily: 'Roboto',),
                     ],
                   ),
                 ),
@@ -114,7 +115,7 @@ class _AdminHomeState extends State<AdminHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.person_rounded, color: bottomNavigationProvider.getIndex == 2? Colors.black: Colors.grey, size: 20,),
-                      CustomText(text: 'Users', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 2? Colors.black: Colors.grey, fontFamily: 'Roboto',),
+                      CustomText(text: 'users'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 2? Colors.black: Colors.grey, fontFamily: 'Roboto',),
                     ],
                   ),
                 ),
@@ -130,7 +131,7 @@ class _AdminHomeState extends State<AdminHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.report, color: bottomNavigationProvider.getIndex == 3? Colors.black: Colors.grey, size: 20,),
-                      CustomText(text: 'Reports', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 3? Colors.black: Colors.grey, fontFamily: 'Roboto',),
+                      CustomText(text: 'reports'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 3? Colors.black: Colors.grey, fontFamily: 'Roboto',),
                     ],
                   ),
                 ),
@@ -146,7 +147,7 @@ class _AdminHomeState extends State<AdminHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.adobe_sharp, color: bottomNavigationProvider.getIndex == 4? Colors.black: Colors.grey, size: 20,),
-                      CustomText(text: 'Ad', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 4? Colors.black: Colors.grey, fontFamily: 'Roboto',),
+                      CustomText(text: 'ad'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 4? Colors.black: Colors.grey, fontFamily: 'Roboto',),
                     ],
                   ),
                 ),
@@ -162,7 +163,7 @@ class _AdminHomeState extends State<AdminHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.workspace_premium, color: bottomNavigationProvider.getIndex == 5? Colors.black: Colors.grey, size: 20,),
-                      CustomText(text: 'Premium', fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 5? Colors.black: Colors.grey, fontFamily: 'Roboto',),
+                      CustomText(text: 'premium'.tr(), fontSize: 11, fontWeight: FontWeight.w300, textColor:  bottomNavigationProvider.getIndex == 5? Colors.black: Colors.grey, fontFamily: 'Roboto',),
                     ],
                   ),
                 ),

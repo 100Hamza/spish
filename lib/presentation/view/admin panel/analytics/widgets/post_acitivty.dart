@@ -8,7 +8,8 @@ import '../../../../elements/custom_text.dart';
 class PostActivity extends StatelessWidget {
   String? profilePic , name, userName , datePosted , numberOfViews;
   IconData? memberIcon;
-  PostActivity({this.profilePic , this.name , this.userName,  this.memberIcon , this.datePosted , this.numberOfViews});
+  bool isTill;
+  PostActivity({this.profilePic , this.name , this.userName,  this.memberIcon , this.datePosted , this.numberOfViews , this.isTill = false});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,7 @@ class PostActivity extends StatelessWidget {
           ),
           Row(
             children: [
-              Icon(Icons.remove_red_eye),
+              isTill? Container(): Icon(Icons.remove_red_eye),
               CustomText(
                 text: numberOfViews,
                 fontSize: 8,

@@ -1,4 +1,5 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:spish/presentation/view/add_report/layout/widgets/dropdown.dart';
@@ -45,7 +46,7 @@ class _AdDetailsState extends State<AdDetails> {
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child: CustomText(
-                text: 'Create New Ad',
+                text: 'create_new_ad'.tr(),
                 fontSize:   14,
                 fontWeight: FontWeight.w400,
                 fontFamily: 'Roboto',
@@ -56,7 +57,7 @@ class _AdDetailsState extends State<AdDetails> {
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child: CustomText(
-                text: 'Complete your ads details, to engage with your audience',
+                text: 'complete_your_ads'.tr(),
                 fontSize:   9,
                 fontWeight: FontWeight.w400,
                 fontFamily: 'Roboto',
@@ -110,14 +111,14 @@ class _AdDetailsState extends State<AdDetails> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           CustomText(
-                            text: 'Drag and Drop your Image here',
+                            text: 'drag_and_drop'.tr(),
                             fontSize:   12,
                             fontWeight: FontWeight.w200,
                             fontFamily: 'Roboto',
                             textColor: FrontEndConfig.kGrayTextColor,
                           ),
                           CustomText(
-                            text: 'Or',
+                            text: 'or'.tr(),
                             fontSize:   12,
                             fontWeight: FontWeight.w200,
                             fontFamily: 'Roboto',
@@ -127,7 +128,7 @@ class _AdDetailsState extends State<AdDetails> {
                          Column(
                            children: [
                              CustomText(
-                               text: 'Choose image',
+                               text: 'choose_image'.tr(),
                                fontSize:   14,
                                fontWeight: FontWeight.w400,
                                fontFamily: 'Roboto',
@@ -150,7 +151,7 @@ class _AdDetailsState extends State<AdDetails> {
             SizedBox(height: ScreenSize().height(context, 0.02),),
             CustomTextField(
               isTitle: true,
-              fieldName: 'Ad Name',
+              fieldName: 'ad_name'.tr(),
               isHintText: true,
               hintText: 'Ex. Banking',
               isFilled: true,
@@ -158,7 +159,7 @@ class _AdDetailsState extends State<AdDetails> {
             ),
             CustomTextField(
               isTitle: true,
-              fieldName: 'Title',
+              fieldName: 'title'.tr(),
               isHintText: true,
               hintText: 'Ex: How to use our API',
               isFilled: true,
@@ -166,12 +167,12 @@ class _AdDetailsState extends State<AdDetails> {
             ),
             CustomTextField(
               isTitle: true,
-              fieldName: 'URL',
+              fieldName: 'url'.tr(),
               isHintText: false,
               isFilled: true,
               textInputType: TextInputType.text,
             ),
-            CustomDropDown(dropDownTitle: 'Place To',),
+            CustomDropDown(dropDownTitle: 'place_to'.tr(), items: ['new_feed'.tr() , 'reports'.tr() , 'notifications'.tr() , 'friends'.tr()]),
             SizedBox(height: ScreenSize().height(context, 0.03),),
             Container(
               alignment: Alignment.center,
@@ -179,7 +180,7 @@ class _AdDetailsState extends State<AdDetails> {
                 onPress: (){// NavigationHelper.pushRoute(context, const SubscribeToPremiumView());
 
                 },
-                text: 'Next', fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.navigate_next,),
+                text: 'next'.tr(), fontColor: Colors.white, width: 0.39, isIcon: true, shadowColor: FrontEndConfig.kGradientButtonShadowColor, fontWeight: FontWeight.w600, fontSize: 16, iconData: Icons.navigate_next,),
             )
           ],
         ),
